@@ -8,3 +8,20 @@ int ReadInt(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
+void SearchNaturalNumbers(int arg1, int arg2)
+{
+    if (arg1 > arg2)
+    {
+        return;
+    }
+    if (arg1%2==0)
+    {
+        System.Console.WriteLine(arg1);
+    }
+    SearchNaturalNumbers (arg1 + 1, arg2);
+}
+
+
+int number1 = ReadInt("Введите число 1: ");
+int number2 = ReadInt("Введите число 2: ");
+SearchNaturalNumbers(number1, number2);
